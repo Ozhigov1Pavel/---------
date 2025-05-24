@@ -3037,7 +3037,7 @@ padding-top: 209px;
   }
 
   .image2 {
-    max-width: 50%;
+    max-width: 90%;
   }
   .arrow-container1 img {
     width: 50px;
@@ -3331,7 +3331,7 @@ padding-top: 209px;
   }
 
   .image2 {
-    max-width: 40%;
+    max-width: 100%;
     margin-bottom: 10px;
   }
 
@@ -4631,6 +4631,9 @@ padding-top: 209px;
   .y-axis-label-vertical2 {
     left: -60px; /* Отступ слева от графика, можно изменить по необходимости */
   }
+  .title_container_4 {
+    padding-bottom: 23px;
+}
 
   #image-text-section_img{
     width: 60%;
@@ -5125,11 +5128,35 @@ padding-top: 209px;
 }
 .charts-wrapper {
   gap: 0px;
+  margin-top: 0px;
 }
+.consequences h1 {
+  padding-bottom: 0px;
+}
+.image_container {
+  gap: 19px;
+}
+.title_container {
+  padding-top: 0px;
+}
+.title_table {
+  padding-top: 30px;
+}
+.chart-section {
+  padding-bottom: 66px;
+}
+.title_container_2 {
+  padding-bottom: 0px;
+}
+
 }
 @media (max-width: 550px) {
   .y-axis-label-vertical2 {
     left: -60px;
+  }
+  .image-text-section {
+    padding: 0px 10%;
+    padding-top: 0px;
   }
   .colored-red {
     margin-top: 1%;
@@ -5359,11 +5386,8 @@ padding-top: 209px;
     margin-top: 0;
   }
   .y-axis-label {
-    position: absolute;
-    left: 80%;
-    top: -3%;
-    transform: translateY(-50%) rotate(0deg);
-    font-size: 13px;
+    font-size: 21px;
+    top: 36%;
 }
   .bar-value {
     font-size: 1rem;
@@ -5371,6 +5395,32 @@ padding-top: 209px;
   .to {
     gap: 0;
   }
+  .charts-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .chart-block_2::after {
+    content: "Количество участников (%)";
+    position: absolute;
+    left: -57%;
+    transform: translateY(-50%) rotate(-90deg);
+    font-family: MyriadProRegular;
+    color: black;
+    font-size: 21px;
+    top: 33%;
+}
+.chart-block_after::after {
+  content: "Количество участников (%)";
+  position: absolute;
+  left: -57%;
+  transform: translateY(-50%) rotate(-90deg);
+  font-family: MyriadProRegular;
+  color: black;
+  font-size: 21px;
+  top: 33%;
+}
+
   .p-value {
     padding-top: 230px;
     padding-right: 0px;
@@ -5492,15 +5542,13 @@ padding-top: 209px;
     font-size: 1.5rem;
     text-align: center;
   }
-  .image1 {
-    height: 144px;
-  }
+
   .image {
-    max-width: 30%;
+    max-width: 66%;
   }
 
   .image2 {
-    max-width: 90%;
+    max-width: 66%;
   }
 
   .treatment-scheme {
@@ -5528,7 +5576,7 @@ padding-top: 209px;
   }
 
   .image-text-section {
-    padding: 44px 1%;
+    padding: 0px 1%;
 
     padding-left: 0;
   }
@@ -5627,11 +5675,11 @@ padding-top: 209px;
   }
 }
 @media (max-width: 450px) {
- .bar {
-  width: 21px;
- }
+  .chart-block_2::after {
+    left: -71%;
+  }
  .chart-container {
-  width: 69%;
+  width: 100%;
 }
 .legend-item {
   font-size: 0.5rem;
