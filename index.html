@@ -48,12 +48,20 @@
                     <h1>Клинический консенсус Европейского общества кардиологов в отношении ожирения&nbsp<sup>3</sup>:
                     </h1>
                     <div class="image_container">
-                        <img class="consensus" src="img/consensus.png" alt="Цели лечения">
-
+                        <picture>
+                          <!-- Мобильный вариант до 650px -->
+                          <source
+                            media="(max-width: 650px)"
+                            srcset="img/consensus_mob.png">
+                          <!-- Десктопный вариант по умолчанию -->
+                          <img
+                            class="consensus"
+                            src="img/consensus.png"
+                            alt="Цели лечения">
+                        </picture>
+                      
                         <img class="imt" src="img/imt.png" alt="Цели лечения">
-                    </div>
-                </div>
-
+                      </div>
             </div>
         </section>
         <div class="container">

@@ -42,15 +42,26 @@ document.addEventListener('DOMContentLoaded', () => {
     function animateBars(section, barClass, valueClass) {
         const bars = section.querySelectorAll(barClass);
         bars.forEach((bar) => {
-            const valueElement = bar.querySelector(valueClass);
-            const targetHeight = parseInt(bar.getAttribute('data-height'), 10);
-            let targetValue = parseFloat(valueElement.textContent.replace(',', '.'));
-            let currentHeight = 0;
-            let currentValue = 0;
-
-            const duration = 2000;
-            const stepHeight = targetHeight / (duration / 16);
-            const stepValue = targetValue / (duration / 16);
+          const valueElement = bar.querySelector(valueClass);
+          // 1) Считаем из data-height
+          let targetHeight = parseInt(bar.getAttribute('data-height'), 10);
+      
+          // 2) Если экран уже узкий, уменьшаем высоту на 30%
+          if (window.innerWidth < 650) {
+            targetHeight = Math.round(targetHeight * 0.7);
+          }
+      
+          // 3) Дальше всё по-старому
+          let targetValue = parseFloat(valueElement.textContent.replace(',', '.'));
+          let currentHeight = 0;
+          let currentValue = 0;
+      
+          const duration = 2000;
+          const stepHeight = targetHeight / (duration / 16);
+          const stepValue = targetValue / (duration / 16);
+      
+          // ... остальной код без изменений ...
+      
 
             if (parseFloat(valueElement.id) < 0) {
                 targetValue = parseFloat(valueElement.id);
@@ -232,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-
+    document.body.style.overflowY = 'hidden'; 
     
 
     function init() {
