@@ -110,7 +110,7 @@ header {
 .intro p {
   font-size: 1.125rem;
   max-width: 740px;
-  color:#000;
+  color: #000;
   font-family: Gilroy;
 }
 .intro h2 {
@@ -333,21 +333,21 @@ header {
 }
 
 .charts-wrapper {
-    display: flex;
-    gap: 2rem;           /* расстояние между графиками */
-    align-items: flex-start; /* или center, как хочется */
-    margin-top: 89px;
-  }
-  
-  .table_section_img {
-    width: 100%;
-  }
-  /* Каждая «колонка» подстраивается под свой контент */
-  .chart-block {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+  display: flex;
+  gap: 2rem; /* расстояние между графиками */
+  align-items: flex-start; /* или center, как хочется */
+  margin-top: 89px;
+}
+
+.table_section_img {
+  width: 100%;
+}
+/* Каждая «колонка» подстраивается под свой контент */
+.chart-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .title_container_4 {
@@ -361,19 +361,18 @@ header {
 
 .title_container_4 h2 {
   max-width: 799px;
-  color: #B62017;
+  color: #b62017;
   font-size: clamp(0.875rem, 0.2628rem + 2.6122vw, 2.875rem);
   font-family: MyriadProBold;
   font-weight: 700;
 }
 
-
-  .centered-section_container{
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    max-width: 1300px;
-  }
+.centered-section_container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1300px;
+}
 .centered-section {
   background-color: rgba(182, 32, 23, 0.1);
   /* height: 100px; */
@@ -744,10 +743,10 @@ header {
   flex: 1;
 }
 .y-axis-img {
- height: 224px;
- position: absolute;
- left: -29px;
- top: 84px;
+  height: 224px;
+  position: absolute;
+  left: -29px;
+  top: 84px;
 }
 .frame2.text {
   flex: 1; /* Задает тексту адаптивное пространство */
@@ -805,7 +804,6 @@ header {
   .box {
     padding: 32px 20px;
   }
- 
 }
 
 /* Медиазапрос для экранов от 768px до 1024px */
@@ -1933,7 +1931,7 @@ ul li img {
 }
 
 .chart-section_2 {
-padding-top: 209px;
+  padding-top: 209px;
 }
 
 .title_container_2 {
@@ -1988,9 +1986,7 @@ padding-top: 209px;
   width: auto;
   border-bottom: inherit;
   padding-top: 200px;
- 
 }
-
 
 .bar {
   width: 96px;
@@ -2834,7 +2830,7 @@ padding-top: 209px;
 /* Кнопка таблицы */
 .table-button1 {
   background-color: #a2a2a2;
-  color:#000;
+  color: #000;
   padding: 10px;
   border-radius: 14px;
   margin: 25px auto 10px;
@@ -3036,7 +3032,6 @@ padding-top: 209px;
     width: 45%;
     margin: 0 40px;
   }
-
 }
 
 /* Медиазапрос для экранов от 768px до 1024px */
@@ -4580,9 +4575,9 @@ padding-top: 209px;
     gap: 27px;
   }
   .image-text-section img {
-  width: 50%;
+    width: 50%;
   }
-  #image-text-section_img{
+  #image-text-section_img {
     width: 100%;
   }
   .category-button {
@@ -4656,12 +4651,12 @@ padding-top: 209px;
   }
   .title_container_4 {
     padding-bottom: 23px;
-}
-.centered-section_container{
-  flex-direction: column;
-  gap: 10px;
-}
-  #image-text-section_img{
+  }
+  .centered-section_container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  #image-text-section_img {
     width: 60%;
   }
   .colored-red {
@@ -4761,7 +4756,7 @@ padding-top: 209px;
   }
   .chart-block_3 {
     padding-top: 17px;
-}
+  }
   .metabolism {
     max-width: 100%;
   }
@@ -4778,38 +4773,37 @@ padding-top: 209px;
   #chart-container_4 {
     width: 70%;
   }
-#chart-block_3 {
-  padding-top: 200px;
-}
+  #chart-block_3 {
+    padding-top: 200px;
+  }
 
-#percentage_3 {
-  font-size: 75px;
-}
+  #percentage_3 {
+    font-size: 75px;
+  }
   .title_container_2 {
     align-items: center;
   }
   .title_container {
-  flex-direction: column;
-  text-align: center;
+    flex-direction: column;
+    text-align: center;
   }
   .title_container_4 {
     flex-direction: column;
     text-align: center;
     justify-items: center;
     align-items: center;
-}
-
-
-.title_container_4 img {
-  width: 50%;
-}
-  .title_container img {
-  width: 50%;
   }
-  .to-item { 
+
+  .title_container_4 img {
+    width: 50%;
+  }
+  .title_container img {
+    width: 50%;
+  }
+  .to-item {
     font-size: 20px;
   }
-  .legend-item { 
+  .legend-item {
     font-size: 20px;
   }
   .y-axis-label {
@@ -4977,15 +4971,14 @@ padding-top: 209px;
     position: relative;
     padding: 0;
   }
-     #chart-container_3 {
-        width: 62%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        height: 100%;
-        padding-top: 0;
-     }
-
+  #chart-container_3 {
+    width: 62%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    padding-top: 0;
+  }
 }
 @media (max-width: 700px) {
   .footer-note2 {
@@ -5002,7 +4995,7 @@ padding-top: 209px;
   }
   .y-axis-label {
     left: -50%;
-}
+  }
 
   .fixed-container {
     width: 100%;
@@ -5048,7 +5041,7 @@ padding-top: 209px;
   }
   .chart-block_3 {
     padding-top: 18px;
-}
+  }
   .pazzle2-img {
     margin-left: -5%;
     /* margin-top: -11%; */
@@ -5088,7 +5081,7 @@ padding-top: 209px;
     height: 50px;
     font-size: 0.6rem;
     width: 161px;
-}
+  }
   .backgroung_section2 {
     width: 100%;
   }
@@ -5149,38 +5142,37 @@ padding-top: 209px;
   }
 }
 @media (max-width: 600px) {
-.bar {
-  width: 38px;
-}
-.chart-container {
-  width: 64%;
-}
-.legend-item {
-  font-size: 0.9rem;
-}
-.charts-wrapper {
-  gap: 0px;
-  margin-top: 0px;
-}
-.consequences h1 {
-  padding-bottom: 0px;
-}
-.image_container {
-  gap: 19px;
-}
-.title_container {
-  padding-top: 0px;
-}
-.title_table {
-  padding-top: 30px;
-}
-.chart-section {
-  padding-bottom: 66px;
-}
-.title_container_2 {
-  padding-bottom: 0px;
-}
-
+  .bar {
+    width: 38px;
+  }
+  .chart-container {
+    width: 64%;
+  }
+  .legend-item {
+    font-size: 0.9rem;
+  }
+  .charts-wrapper {
+    gap: 0px;
+    margin-top: 0px;
+  }
+  .consequences h1 {
+    padding-bottom: 0px;
+  }
+  .image_container {
+    gap: 19px;
+  }
+  .title_container {
+    padding-top: 0px;
+  }
+  .title_table {
+    padding-top: 30px;
+  }
+  .chart-section {
+    padding-bottom: 66px;
+  }
+  .title_container_2 {
+    padding-bottom: 0px;
+  }
 }
 @media (max-width: 550px) {
   .y-axis-label-vertical2 {
@@ -5197,16 +5189,16 @@ padding-top: 209px;
   }
   .to-item {
     font-size: 0.7rem;
-}
-.legend-item {
-  font-size: 0.6rem;
-}
-.chart-container {
-  width: 71%;
-}
-.y-axis-label {
-  left: -56%;
-}
+  }
+  .legend-item {
+    font-size: 0.6rem;
+  }
+  .chart-container {
+    width: 71%;
+  }
+  .y-axis-label {
+    left: -56%;
+  }
   .pazzle2-text {
     width: 60%;
     margin-top: 1%;
@@ -5287,12 +5279,12 @@ padding-top: 209px;
   }
   #chart-block_3 {
     padding-top: 71px;
-}
+  }
 
-.chart-container_3::after {
-  left: -58%;
-  top: 26%;
-}
+  .chart-container_3::after {
+    left: -58%;
+    top: 26%;
+  }
 
   .text-content1 {
     display: flex;
@@ -5366,10 +5358,10 @@ padding-top: 209px;
 
   .content-block img {
     width: 53px;
-}
-.content-block p {
-  font-size: 0.8rem;
-}
+  }
+  .content-block p {
+    font-size: 0.8rem;
+  }
   .info-box2 {
     width: 120px;
   }
@@ -5394,7 +5386,6 @@ padding-top: 209px;
     padding: 1%;
     align-items: center;
     gap: 20px;
-
   }
   .section-with-media video {
     width: 100%;
@@ -5440,7 +5431,7 @@ padding-top: 209px;
   .y-axis-label {
     font-size: 17px;
     top: 41%;
-}
+  }
   .bar-value {
     font-size: 1rem;
   }
@@ -5461,17 +5452,17 @@ padding-top: 209px;
     color: black;
     font-size: 17px;
     top: 33%;
-}
-.chart-block_after::after {
-  content: "Количество участников (%)";
-  position: absolute;
-  left: -57%;
-  transform: translateY(-50%) rotate(-90deg);
-  font-family: MyriadProRegular;
-  color: black;
-  font-size: 17px;
-  top: 33%;
-}
+  }
+  .chart-block_after::after {
+    content: "Количество участников (%)";
+    position: absolute;
+    left: -57%;
+    transform: translateY(-50%) rotate(-90deg);
+    font-family: MyriadProRegular;
+    color: black;
+    font-size: 17px;
+    top: 33%;
+  }
 
   .p-value {
     padding-top: 230px;
@@ -5687,7 +5678,7 @@ padding-top: 209px;
   }
   #percentage_3 {
     font-size: 5vh;
-}
+  }
   .consequences2 {
     /* height: 400px; */
   }
@@ -5733,17 +5724,16 @@ padding-top: 209px;
   .chart-block_2::after {
     left: -55%;
   }
- .chart-container {
-  width: 100%;
-}
-.legend-item {
-  font-size: 0.5rem;
+  .chart-container {
+    width: 100%;
+  }
+  .legend-item {
+    font-size: 0.5rem;
+  }
 
-}
-
-.table-button1 {
-  font-size: 10px;
-}
+  .table-button1 {
+    font-size: 10px;
+  }
 }
 @media (max-width: 400px) {
   .colored-red {
@@ -5805,13 +5795,13 @@ padding-top: 209px;
   }
   .y-axis-label {
     left: -49%;
-}
-.chart-block_2::after {
-  left: -50%;
-}
-.chart-block_after::after {
-  left: -48%;
-}
+  }
+  .chart-block_2::after {
+    left: -50%;
+  }
+  .chart-block_after::after {
+    left: -48%;
+  }
 }
 @media (max-width: 355px) {
   .pazzle2 {
@@ -5829,7 +5819,7 @@ padding-top: 209px;
   .intro h1 {
     font-size: 1rem;
     width: 50%;
-}
+  }
   .pazzle2-text {
     width: 67%;
     margin-top: 0%;
@@ -6010,113 +6000,112 @@ padding-top: 209px;
     padding: 5px;
   }
 
+  .clinical-table1 {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    margin-bottom: 20px;
+  }
 
-.clinical-table1 {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-.clinical-table1 th,
-.clinical-table1 td {
-  padding: 5px;
-  text-align: center;
-  font-size: 18px;
-}
-
-/* Заголовки */
-.parameters-header1,
-.indicators-header1,
-.group-header1 {
-  background-color: #f2f2f2;
-  color: #c00000;
-  font-weight: 600;
-}
-
-/* Цветовые строки и ячейки */
-.gray-text1 {
-  background-color: #f2f2f2;
-  color: #595959;
-}
-
-.dark-gray-text1 {
-  color: #505050;
-}
-
-.light-gray-text1 {
-  background-color: #f2f2f2;
-  color: #595959;
-}
-
-.green-cell1 {
-  background-color: #d9d9d9;
-  color: #595959;
-}
-
-.green-cell2 {
-  background-color: #d9d9d9;
-  color: #c00000;
-  font-weight: 600;
-}
-
-.highlight-red1 {
-  background-color: #c00000;
-  color: #fff;
-}
-
-.highlight-pink1 {
-  background-color: #d04040;
-  color: #ffffff;
-}
-
-.medium-gray-cell1 {
-  background-color: #989595;
-  color: #ffffff;
-}
-
-.very-dark-gray-cell1 {
-  background-color: #7f7f7f;
-  color: #fff;
-}
-
-.very-light-gray-cell1 {
-  background-color: #d04040;
-  color: #ffffff;
-}
-
-.highlight-yellow1 {
-  background-color: #ffd700;
-  color: #ffffff;
-}
-
-/* Толстый шрифт */
-.bold1 {
-  font-weight: bold;
-}
-
-/* Мобильная версия */
-@media (min-width: 380px) and (max-width: 768px) {
   .clinical-table1 th,
   .clinical-table1 td {
-    font-size: 12px;
-    padding: 8px;
+    padding: 5px;
+    text-align: center;
+    font-size: 18px;
   }
 
-  .clinical-table1 {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 380px) {
-  .clinical-table1 th,
-  .clinical-table1 td {
-    font-size: 10px;
-    padding: 8px;
+  /* Заголовки */
+  .parameters-header1,
+  .indicators-header1,
+  .group-header1 {
+    background-color: #f2f2f2;
+    color: #c00000;
+    font-weight: 600;
   }
 
-  .clinical-table1 {
-    font-size: 12px;
+  /* Цветовые строки и ячейки */
+  .gray-text1 {
+    background-color: #f2f2f2;
+    color: #595959;
   }
-}
+
+  .dark-gray-text1 {
+    color: #505050;
+  }
+
+  .light-gray-text1 {
+    background-color: #f2f2f2;
+    color: #595959;
+  }
+
+  .green-cell1 {
+    background-color: #d9d9d9;
+    color: #595959;
+  }
+
+  .green-cell2 {
+    background-color: #d9d9d9;
+    color: #c00000;
+    font-weight: 600;
+  }
+
+  .highlight-red1 {
+    background-color: #c00000;
+    color: #fff;
+  }
+
+  .highlight-pink1 {
+    background-color: #d04040;
+    color: #ffffff;
+  }
+
+  .medium-gray-cell1 {
+    background-color: #989595;
+    color: #ffffff;
+  }
+
+  .very-dark-gray-cell1 {
+    background-color: #7f7f7f;
+    color: #fff;
+  }
+
+  .very-light-gray-cell1 {
+    background-color: #d04040;
+    color: #ffffff;
+  }
+
+  .highlight-yellow1 {
+    background-color: #ffd700;
+    color: #ffffff;
+  }
+
+  /* Толстый шрифт */
+  .bold1 {
+    font-weight: bold;
+  }
+
+  /* Мобильная версия */
+  @media (min-width: 380px) and (max-width: 768px) {
+    .clinical-table1 th,
+    .clinical-table1 td {
+      font-size: 12px;
+      padding: 8px;
+    }
+
+    .clinical-table1 {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .clinical-table1 th,
+    .clinical-table1 td {
+      font-size: 10px;
+      padding: 8px;
+    }
+
+    .clinical-table1 {
+      font-size: 12px;
+    }
+  }
 }
