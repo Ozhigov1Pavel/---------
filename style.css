@@ -4773,6 +4773,9 @@ ul li img {
   #chart-container_4 {
     width: 70%;
   }
+  #chart-container_4 {
+    width: 70%;
+  }
   #chart-block_3 {
     padding-top: 200px;
   }
@@ -5166,6 +5169,7 @@ ul li img {
   }
   .title_table {
     padding-top: 30px;
+    font-size: 1rem;
   }
   .chart-section {
     padding-bottom: 66px;
@@ -5424,7 +5428,7 @@ ul li img {
     font-size: 1.3vh;
   }
   .chart-container {
-    width: 82%;
+    width: 69%;
     margin-bottom: 0;
     margin-top: 0;
   }
@@ -5506,6 +5510,17 @@ ul li img {
     font-size: 14px;
     margin-top: 185px;
     padding-bottom: 30px;
+  }
+  #chart-container_4 {
+    width: 100%;
+  }
+  #chart-container_4::after {
+    left: -29%;
+    transform: translateY(-50%) rotate(-90deg);
+    font-family: MyriadProRegular;
+    color: black;
+    font-size: 17px;
+    top: 28%;
   }
 
   .footer-note2 p {
@@ -5725,7 +5740,18 @@ ul li img {
     left: -55%;
   }
   .chart-container {
+    width: 80%;
+  }
+  #chart-container_4 {
     width: 100%;
+  }
+  #chart-container_4::after {
+    left: -29%;
+    transform: translateY(-50%) rotate(-90deg);
+    font-family: MyriadProRegular;
+    color: black;
+    font-size: 17px;
+    top: 28%;
   }
   .legend-item {
     font-size: 0.5rem;
