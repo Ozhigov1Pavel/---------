@@ -306,7 +306,7 @@ header {
   width: 100%;
 }
 .imt {
-  width: 100%;
+  max-width: 1001px;
 }
 
 .image_container {
@@ -326,7 +326,7 @@ header {
 }
 
 .title_table {
-  font-size: clamp(1.25rem, 0.9439rem + 1.3061vw, 2.25rem);
+  font-size: clamp(1.25rem, 0.9439rem + 1.3061vw, 2rem);
   line-height: 100%;
   padding-top: 103px;
   letter-spacing: -0.5px;
@@ -368,19 +368,20 @@ header {
 }
 
 
-  
+  .centered-section_container{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1300px;
+  }
 .centered-section {
   background-color: rgba(182, 32, 23, 0.1);
   /* height: 100px; */
   width: 100%;
-  padding: 11px 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
   position: relative;
   overflow: hidden;
   opacity: 0;
+  padding: 20px 0;
 }
 
 .centered-section.animate {
@@ -669,6 +670,16 @@ header {
   animation: slideDown 1s ease-out forwards;
   animation-delay: 0.3s;
 }
+.chart-container_3::after {
+  content: "Шкала MFI-20, баллы";
+  position: absolute;
+  left: -14%;
+  transform: translateY(-50%) rotate(-90deg);
+  font-family: MyriadProRegular;
+  color: black;
+  font-size: 17px;
+  top: -14%;
+}
 
 .chart-container3 {
   display: flex;
@@ -732,7 +743,12 @@ header {
   font-family: MyriadProBold;
   flex: 1;
 }
-
+.y-axis-img {
+ height: 224px;
+ position: absolute;
+ left: -29px;
+ top: 84px;
+}
 .frame2.text {
   flex: 1; /* Задает тексту адаптивное пространство */
 }
@@ -1499,16 +1515,17 @@ header {
 .content-block {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 15px;
 }
 
 .content-block img {
   object-fit: cover;
+  width: 85px;
 }
 
 .content-block p {
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: rgba(51, 51, 51, 1);
   font-family: MyriadProBold;
   max-width: 257px;
@@ -3388,6 +3405,9 @@ padding-top: 209px;
     left: 0%;
     transform: translateY(-198px);
   }
+  .chart-container_3::after {
+    left: -29%;
+  }
 }
 
 /* Медиазапрос для экранов менее 768px */
@@ -4181,7 +4201,7 @@ padding-top: 209px;
 /* Вертикальная надпись "Баллы" */
 .y-axis-label {
   position: absolute;
-  left: -15%;
+  left: -22%;
   top: 31%;
   transform: translateY(-50%) rotate(-90deg);
   font-family: MyriadProRegular;
@@ -4626,6 +4646,9 @@ padding-top: 209px;
   .charts-wrapper {
     gap: 2%;
   }
+  .imt {
+    max-width: 100%;
+  }
 }
 @media (max-width: 1024px) {
   .y-axis-label-vertical2 {
@@ -4634,7 +4657,10 @@ padding-top: 209px;
   .title_container_4 {
     padding-bottom: 23px;
 }
-
+.centered-section_container{
+  flex-direction: column;
+  gap: 10px;
+}
   #image-text-section_img{
     width: 60%;
   }
@@ -4749,10 +4775,16 @@ padding-top: 209px;
     width: 349px;
     margin: 0 auto;
   }
-  .chart-container img{
-    width: 100%;
-
+  #chart-container_4 {
+    width: 70%;
   }
+#chart-block_3 {
+  padding-top: 200px;
+}
+
+#percentage_3 {
+  font-size: 75px;
+}
   .title_container_2 {
     align-items: center;
   }
@@ -4827,7 +4859,7 @@ padding-top: 209px;
   }
 
   .table-button1 {
-    font-size: 17px;
+    font-size: 13px;
   }
 
   .bar {
@@ -4853,7 +4885,7 @@ padding-top: 209px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: white;
     font-family: "MyriadProRegular";
   }
@@ -5173,7 +5205,7 @@ padding-top: 209px;
   width: 71%;
 }
 .y-axis-label {
-  left: -58%;
+  left: -56%;
 }
   .pazzle2-text {
     width: 60%;
@@ -5247,6 +5279,20 @@ padding-top: 209px;
     margin-top: 10px;
     justify-content: center;
   }
+  .y-axis-img {
+    height: 162px;
+    position: absolute;
+    left: -20px;
+    top: 143px;
+  }
+  #chart-block_3 {
+    padding-top: 71px;
+}
+
+.chart-container_3::after {
+  left: -58%;
+  top: 26%;
+}
 
   .text-content1 {
     display: flex;
@@ -5318,6 +5364,12 @@ padding-top: 209px;
     font-weight: 100;
   }
 
+  .content-block img {
+    width: 53px;
+}
+.content-block p {
+  font-size: 0.8rem;
+}
   .info-box2 {
     width: 120px;
   }
@@ -5352,7 +5404,7 @@ padding-top: 209px;
   }
 
   .metabolism h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     text-align: center;
   }
   .image-text-section img {
@@ -5386,8 +5438,8 @@ padding-top: 209px;
     margin-top: 0;
   }
   .y-axis-label {
-    font-size: 21px;
-    top: 36%;
+    font-size: 17px;
+    top: 41%;
 }
   .bar-value {
     font-size: 1rem;
@@ -5407,7 +5459,7 @@ padding-top: 209px;
     transform: translateY(-50%) rotate(-90deg);
     font-family: MyriadProRegular;
     color: black;
-    font-size: 21px;
+    font-size: 17px;
     top: 33%;
 }
 .chart-block_after::after {
@@ -5417,7 +5469,7 @@ padding-top: 209px;
   transform: translateY(-50%) rotate(-90deg);
   font-family: MyriadProRegular;
   color: black;
-  font-size: 21px;
+  font-size: 17px;
   top: 33%;
 }
 
@@ -5633,6 +5685,9 @@ padding-top: 209px;
     right: 6%;
     width: 80%;
   }
+  #percentage_3 {
+    font-size: 5vh;
+}
   .consequences2 {
     /* height: 400px; */
   }
@@ -5676,15 +5731,16 @@ padding-top: 209px;
 }
 @media (max-width: 450px) {
   .chart-block_2::after {
-    left: -71%;
+    left: -55%;
   }
  .chart-container {
   width: 100%;
 }
 .legend-item {
   font-size: 0.5rem;
-  margin: 0;
+
 }
+
 .table-button1 {
   font-size: 10px;
 }
@@ -5747,6 +5803,15 @@ padding-top: 209px;
   .f-n-1 p {
     margin-top: 190px;
   }
+  .y-axis-label {
+    left: -49%;
+}
+.chart-block_2::after {
+  left: -50%;
+}
+.chart-block_after::after {
+  left: -48%;
+}
 }
 @media (max-width: 355px) {
   .pazzle2 {
@@ -5944,7 +6009,7 @@ padding-top: 209px;
   .clinical-table td {
     padding: 5px;
   }
-}
+
 
 .clinical-table1 {
   width: 100%;
@@ -6053,4 +6118,5 @@ padding-top: 209px;
   .clinical-table1 {
     font-size: 12px;
   }
+}
 }

@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             referencesButton.classList.toggle('active'); // Добавить/удалить класс active для кнопки
         }
     }
+    
 
     // Видео
     const video = document.getElementById('myVideo');
