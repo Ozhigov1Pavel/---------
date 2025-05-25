@@ -6,10 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (referencesList) {
             referencesList.classList.toggle('visible'); // Показать/скрыть список
-            referencesButton.classList.toggle('active'); // Добавить/удалить класс active для кнопки
+            referencesButton.classList.toggle('active');   // Добавить/удалить класс active для кнопки
         }
     }
-    
 
     // Видео
     const video = document.getElementById('myVideo');
@@ -43,26 +42,23 @@ document.addEventListener('DOMContentLoaded', () => {
     function animateBars(section, barClass, valueClass) {
         const bars = section.querySelectorAll(barClass);
         bars.forEach((bar) => {
-          const valueElement = bar.querySelector(valueClass);
-          // 1) Считаем из data-height
-          let targetHeight = parseInt(bar.getAttribute('data-height'), 10);
-      
-          // 2) Если экран уже узкий, уменьшаем высоту на 30%
-          if (window.innerWidth < 650) {
-            targetHeight = Math.round(targetHeight * 0.7);
-          }
-      
-          // 3) Дальше всё по-старому
-          let targetValue = parseFloat(valueElement.textContent.replace(',', '.'));
-          let currentHeight = 0;
-          let currentValue = 0;
-      
-          const duration = 2000;
-          const stepHeight = targetHeight / (duration / 16);
-          const stepValue = targetValue / (duration / 16);
-      
-          // ... остальной код без изменений ...
-      
+            const valueElement = bar.querySelector(valueClass);
+            // 1) Считаем из data-height
+            let targetHeight = parseInt(bar.getAttribute('data-height'), 10);
+
+            // 2) Если экран уже узкий, уменьшаем высоту на 30%
+            if (window.innerWidth < 650) {
+                targetHeight = Math.round(targetHeight * 0.7);
+            }
+
+            // 3) Дальше всё по-старому
+            let targetValue = parseFloat(valueElement.textContent.replace(',', '.'));
+            let currentHeight = 0;
+            let currentValue = 0;
+
+            const duration = 2000;
+            const stepHeight = targetHeight / (duration / 16);
+            const stepValue = targetValue / (duration / 16);
 
             if (parseFloat(valueElement.id) < 0) {
                 targetValue = parseFloat(valueElement.id);
@@ -111,45 +107,49 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         setTimeout(() => {
-            section.querySelectorAll('.p-value-container, .to, .legend3, .legend, .arrow-container, .arrow-container1, .table-button, .table-button1, .p-value1-container1, .p-value4-container1')
-                .forEach(el => el.classList.add('visible'));
+            section.querySelectorAll(
+                '.p-value-container, .to, .legend3, .legend, .arrow-container, .arrow-container1, .table-button, .table-button1, .p-value1-container1, .p-value4-container1'
+            ).forEach(el => el.classList.add('visible'));
         }, 100);
     }
 
     function handleScrollCharts() {
-        const sections = document.querySelectorAll('.chart-section, .chart-section1, .chart-section3, .chart-section4, .chart-section5');
+        const sections = document.querySelectorAll(
+            '.chart-section, .chart-section1, .chart-section3, .chart-section4, .chart-section5'
+        );
         sections.forEach((section) => {
-            const chartContainer = section.querySelector('.chart-container, .chart-container1, .chart-container3, .chart-container4');
-            if (chartContainer && isScrolledIntoView(chartContainer, 50) && !section.classList.contains('visible')) {
+            const chartContainer = section.querySelector(
+                '.chart-container, .chart-container1, .chart-container3, .chart-container4'
+            );
+            // Запуск при 20% видимости вместо 50%
+            if (chartContainer && isScrolledIntoView(chartContainer, 20) && !section.classList.contains('visible')) {
                 section.classList.add('visible');
-    
+
                 let barClasses, valueClasses;
                 if (section.classList.contains('chart-section5')) {
-                    // Устанавливаем bar5 для секции 5
                     barClasses = ['.bar5'];
                     valueClasses = ['.bar-value5'];
                 } else if (section.classList.contains('chart-section4')) {
-                    // Устанавливаем bar1 и bar3 для секции 4
                     barClasses = ['.bar1', '.bar3'];
                     valueClasses = ['.bar-value1', '.bar-value3'];
-                } else if (section.classList.contains('chart-section1') || section.classList.contains('chart-section3')) {
+                } else if (
+                    section.classList.contains('chart-section1') ||
+                    section.classList.contains('chart-section3')
+                ) {
                     barClasses = ['.bar1'];
                     valueClasses = ['.bar-value1'];
                 } else {
                     barClasses = ['.bar'];
                     valueClasses = ['.bar-value'];
                 }
-                
-    
-                // Запускаем анимацию для каждого бара в секции
+
+                // Запускаем анимацию для каждого бара
                 barClasses.forEach((barClass, index) => {
-                    const valueClass = valueClasses[index];
-                    animateBars(section, barClass, valueClass);
+                    animateBars(section, barClass, valueClasses[index]);
                 });
             }
         });
     }
-    
 
     function handleScrollMechanisms() {
         const sections = document.querySelectorAll('.mechanisms-section, .mechanisms-section1');
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function handleScrollAnimations() {
-        const sections = [
+        const selectors = [
             '.intro',
             '.section-with-media',
             '.consequences',
@@ -193,59 +193,47 @@ document.addEventListener('DOMContentLoaded', () => {
             '.image_container'
         ];
 
-        const observerOptions = {
-            threshold: 0.3
-        };
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('animate');
                     if (entry.target.classList.contains('anniversary-section')) {
-                        const referencesButton = document.querySelector('.references-button');
-                        if (referencesButton) {
-                            referencesButton.classList.add('animate');
-                        }
+                        const refBtn = document.querySelector('.references-button');
+                        if (refBtn) refBtn.classList.add('animate');
                     }
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.3 });
 
-        sections.forEach(selector => {
-            const section = document.querySelector(selector);
-            if (section) observer.observe(section);
+        selectors.forEach(sel => {
+            const elem = document.querySelector(sel);
+            if (elem) observer.observe(elem);
         });
     }
 
     function handleScrollImprovementSections() {
-        const sections2 = document.querySelectorAll('.improvement2');
-        const sections3 = document.querySelectorAll('.improvement3');
-        const images = document.querySelectorAll('.table_page2');
-    
-        // Обработать секции improvement2
-        sections2.forEach((section) => {
-            if (isScrolledIntoView(section, 20) && !section.classList.contains('animate')) {
-                section.classList.add('animate');
+        const s2 = document.querySelectorAll('.improvement2');
+        const s3 = document.querySelectorAll('.improvement3');
+        const imgs = document.querySelectorAll('.table_page2');
+
+        s2.forEach(sec => {
+            if (isScrolledIntoView(sec, 20) && !sec.classList.contains('animate')) {
+                sec.classList.add('animate');
             }
         });
-    
-        // Обработать секции improvement3
-        sections3.forEach((section) => {
-            if (isScrolledIntoView(section, 20) && !section.classList.contains('animate')) {
-                section.classList.add('animate');
+        s3.forEach(sec => {
+            if (isScrolledIntoView(sec, 20) && !sec.classList.contains('animate')) {
+                sec.classList.add('animate');
             }
         });
-    
-        // Обработать изображения
-        images.forEach((image) => {
-            if (isScrolledIntoView(image, 20) && !image.classList.contains('animate')) {
-                image.classList.add('animate');
+        imgs.forEach(img => {
+            if (isScrolledIntoView(img, 20) && !img.classList.contains('animate')) {
+                img.classList.add('animate');
             }
         });
     }
-    
-    document.body.style.overflowY = 'hidden'; 
-    
+
+    document.body.style.overflowY = 'hidden';
 
     function init() {
         handleScrollCharts();
